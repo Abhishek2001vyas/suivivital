@@ -1,0 +1,66 @@
+Container(
+            height: h/4,
+            child:
+            Column(children: [
+              Center(child: Text("Latest Check",style: TextStyle(fontWeight: FontWeight.bold,color: colors.primary)),),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                Container(height: h/6.5,width: w/6.5,
+                  decoration: BoxDecoration(shape:BoxShape.circle ,color: colors.logosec,),
+                  child: Center(child: Text("0 mmol/l")),),
+                Container(height: h/4.5,width: w/4.5,
+                  decoration: BoxDecoration(shape:BoxShape.circle ,color: colors.primary,),
+                  child: Center(
+                    child: Container(height: h/6.5,width: w/6.5,
+                      decoration: BoxDecoration(shape:BoxShape.circle ,color: colors.logosec,),
+                      child: Center(child: Text("   Est.0 Hba1c")),),
+                  ),
+                ),
+                Container(height: h/6.5,width: w/6.5,
+                  decoration: BoxDecoration(shape:BoxShape.circle ,color: colors.logosec,),
+                  child: Center(child: Text("0 U")),),
+              ],),
+            ]),),
+          Container(width: w/1,
+            padding:EdgeInsets.all(15),
+            child: Column(children: [
+              Text("Good!",style: TextStyle(fontWeight: FontWeight.bold,color: colors.logosec)),
+              Text("Start recording glucose",style: TextStyle(fontWeight: FontWeight.bold,color: colors.primary)),
+
+
+            ]),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),border: Border.all(color: colors.logosec,width: 1)),),
+          SizedBox(height: h/80),
+          Container(width: w/1,
+            padding:EdgeInsets.all(15),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+              Column(
+                children: [
+                  Icon(Icons.water_drop,size: 30,color: colors.geryq1),
+                  SizedBox(
+                    height: h / 50,
+                  ),
+                  Text("Log Entry"),
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(Icons.grid_view_outlined,size: 30,color: colors.geryq1),
+                  SizedBox(
+                    height: h / 50,
+                  ),
+                  Text("Bolus Adviser"),
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(Icons.note_alt_outlined,size: 30,color: colors.geryq1),
+                  SizedBox(
+                    height: h / 50,
+                  ),
+                  Text("Log Book"),
+                ],
+              )
+            ],),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),border: Border.all(color: colors.logosec,width: 1)),)
